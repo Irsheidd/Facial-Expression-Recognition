@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fer"
+version = "1.0.0"
+description = "Facial expression recognition on FER-2013: classical features + SVM vs. a custom CNN"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "tensorflow>=2.16,<2.19",
+    "opencv-python-headless>=4.8,<5",  # 5.x moved Haar cascades out of the main package
+    "scikit-learn>=1.3",
+    "numpy",
+    "matplotlib",
+    "seaborn",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

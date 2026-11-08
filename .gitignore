@@ -1,0 +1,14 @@
+# Dataset and trained weights are not redistributed
+data/
+models/
+reports/
+logs/
+*.keras
+*.h5
+
+# Python
+__pycache__/
+*.egg-info/
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
